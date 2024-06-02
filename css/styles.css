@@ -1,0 +1,122 @@
+body {
+    color: #31363F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #76ABAE;
+    font-weight: bold;
+}
+
+.nav-links,
+.social-links {
+    list-style: none;
+}
+
+.nav-links li,
+.social-links a {
+    display: inline;
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #31363F;
+    font-size: 1em;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #31363F;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover,
+.social-links a:hover {
+    text-decoration: underline;
+    color: #76ABAE;
+}
+
+.cuadro {
+    min-height: 100hv;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin: 20px 5%;
+}
+
+h1 {
+    color: #76ABAE;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #76ABAE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #609b98;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #31363F;
+}
+
+pre {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

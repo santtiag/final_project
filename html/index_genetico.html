@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Corte de Telas</title>
+    <link href="../css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Resolución de Problemas</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./index_voraz.html">Voraz</a></li>
+                <li><a href="./index_genetico.html">Genetico</a></li>
+            </ul>
+            <div class="social-links">
+                <a target="_blank" class="fa" href="https://www.instagram.com/romero_code/?next=%2F">&#xf16d;</a>
+                <a target="_blank" class="fa" href="https://github.com/santtiag">&#xf09b;</a>
+                <a target="_blank" class="fa" href="https://www.youtube.com/@romero_code">&#xf16a;</a>
+                <a target="_blank" class="fa" href="https://twitter.com/_santtiag">&#xf099;</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="cuadro">
+        <main>
+            <h1>Optimización de Corte de Telas</h1>
+            <h2 style="text-align: center;">Algoritmo Genetico</h2>
+            <div id="orders">
+                <div class="order-container">
+                    <label for="length-1">Longitud del Pedido:</label>
+                    <input type="number" id="length-1" name="length-1" required>
+                    <label for="quantity-1">Cantidad:</label>
+                    <input type="number" id="quantity-1" name="quantity-1" required>
+                </div>
+            </div>
+            <button class="button" onclick="addOrder()">Agregar Otro Pedido</button>
+            <button class="button" onclick="executeGeneticAlgorithm()">Ejecutar Algoritmo Voraz</button>
+            <h2>Resultados</h2>
+            <pre id="results"></pre>
+        </main>
+    </div>
+    <script src="../js/script_genetico.js"></script>
+</body>
+
+</html>

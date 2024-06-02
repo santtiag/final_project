@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navegation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Resolución de Problemas</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="html/index_voraz.html">Voraz</a></li>
+                <li><a href="html/index_genetico.html">Genetico</a></li>
+            </ul>
+            <div class="social-links">
+                <a target="_blank" class="fa" href="https://www.instagram.com/romero_code/?next=%2F">&#xf16d;</a>
+                <a target="_blank" class="fa" href="https://github.com/santtiag">&#xf09b;</a>
+                <a target="_blank" class="fa" href="https://www.youtube.com/@romero_code">&#xf16a;</a>
+                <a target="_blank" class="fa" href="https://twitter.com/_santtiag">&#xf099;</a>
+            </div>
+        </nav>
+    </header>
+    <div class="cuadro">
+        <div class="content">
+            <h1 style="text-align: center;">Proyecto de Final</h1>
+
+            <h2>Contenido</h2>
+            <ul>
+                <li>Introducción 3</li>
+                <li>Algoritmos Voraces 4</li>
+                <li>Algoritmos Genéticos 13</li>
+                <li>Análisis de problema 22</li>
+                <li>Solución Voraz y Genética (Diagrama de Flujo) 31</li>
+                <li>Implementación de Código 32</li>
+                <li>Resultados y Comparaciones 33</li>
+                <li>Conclusiones 33</li>
+            </ul>
+
+            <h2>Introducción</h2>
+            <p>Este proyecto nos centramos en el problema específico de la optimización de corte de telas en la
+                industria
+                textil, un desafío clave para empresas que buscan minimizar desperdicios y maximizar la eficiencia en la
+                producción.</p>
+            <p>La empresa colombiana Fabricato, reconocida por su comercialización y fabricación de productos textiles,
+                enfrenta
+                el desafío de cortar rollos de tela de longitud fija para satisfacer pedidos de diversas longitudes
+                minimizando
+                el desperdicio. Este problema no solo tiene implicaciones económicas significativas debido al costo de
+                los
+                materiales, sino que también afecta la sostenibilidad operativa de la empresa en términos de gestión de
+                residuos.</p>
+            <p>Para abordar este problema, exploraremos dos enfoques algorítmicos distintos: los algoritmos voraces y
+                los
+                algoritmos genéticos. Los algoritmos voraces son conocidos por su simplicidad y rapidez, ofreciendo
+                soluciones
+                óptimas locales que, en ciertos casos, pueden ser globalmente óptimas. Por otro lado, los algoritmos
+                genéticos
+                representan una técnica de búsqueda y optimización basada en principios de evolución natural, capaz de
+                explorar
+                eficazmente grandes espacios de soluciones y adaptarse a problemas complejos y dinámicos.</p>
+            <p>Este trabajo tiene como objetivo aplicar estos dos métodos al problema de corte de telas de Fabricato,
+                comparando
+                su eficiencia, precisión y rendimiento en términos de minimización de desperdicios.</p>
+
+            <h2>Algoritmos voraces</h2>
+            <p>Los algoritmos voraces son una técnica de solución de problemas que toma decisiones secuenciales, en las
+                que
+                cada
+                decisión es óptima desde el punto de vista local. La idea es que al seleccionar la mejor opción en cada
+                paso, se
+                alcanzará una solución global óptima. Estos algoritmos funcionan bien para problemas que pueden ser
+                descompuestos en subproblemas, donde las soluciones locales óptimas llevan a una solución global óptima.
+            </p>
+
+            <h3>Ventajas y Limitaciones:</h3>
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Simples de entender e implementar.</li>
+                <li>Eficientes en términos de tiempo de ejecución, especialmente cuando el problema garantiza que las
+                    elecciones
+                    locales conducen a una solución global óptima.</li>
+            </ul>
+            <h4>Limitaciones:</h4>
+            <ul>
+                <li>No siempre garantizan una solución óptima para problemas más complejos donde la elección local
+                    óptima no
+                    necesariamente conduce a la mejor solución global.</li>
+            </ul>
+
+            <h2>Algoritmo Genético</h2>
+            <p>Un Algoritmo Genético (AG) es una metodología de optimización y resolución de problemas que simula la
+                evolución
+                biológica. Funciona creando una población de soluciones potenciales, codificadas de cierta forma, y
+                evalúa
+                cada
+                una mediante una función de aptitud que mide su eficacia en resolver el problema dado. Inicialmente,
+                muchas
+                de
+                estas soluciones serán ineficaces, pero algunas, por azar, mostrarán promesa. Estas se seleccionan para
+                reproducirse, introduciendo variaciones aleatorias en sus "descendientes" a través de mutaciones y
+                cruzamientos,
+                imitando la reproducción sexual y las mutaciones genéticas. Este proceso se repite a través de múltiples
+                generaciones, refinando continuamente las soluciones hasta alcanzar un nivel de eficiencia deseado.</p>
+
+            <h3>Ventajas y Desafíos:</h3>
+            <h4>Ventajas:</h4>
+            <ul>
+                <li>Capacidad para encontrar soluciones aceptables en espacios de búsqueda grandes y complejos.</li>
+                <li>Robustez frente a la variabilidad y la falta de información detallada sobre el problema.</li>
+            </ul>
+            <h4>Desafíos:</h4>
+            <ul>
+                <li>Requiere una cuidadosa calibración de parámetros como la tasa de mutación y el tamaño de la
+                    población.
+                </li>
+                <li>La convergencia a la solución óptima no está garantizada y puede requerir muchas generaciones, lo
+                    que
+                    implica un alto costo computacional.</li>
+            </ul>
+
+            <h2>Análisis del Problema</h2>
+            <h3>Definición del Problema:</h3>
+            <p>Fabricato, una empresa textil, produce rollos de tela de longitud fija (por ejemplo, 100 metros cada uno)
+                y
+                debe
+                satisfacer pedidos de piezas de tela de diferentes longitudes (5 metros, 10 metros, 15 metros, etc.). El
+                desafío
+                es cortar estos rollos de manera que se minimice el desperdicio de tela mientras se cumplen todos los
+                pedidos de
+                los clientes. Esto implica un problema de optimización donde se busca la manera más eficiente de
+                distribuir
+                los
+                cortes en cada rollo.</p>
+
+            <h3>Complejidad del Problema:</h3>
+            <p>Este problema es una variante del problema del corte de stock, conocido por su naturaleza NP-difícil, lo
+                que
+                significa que no existe un algoritmo que pueda resolver todas las instancias del problema de manera
+                óptima
+                en
+                tiempo polinomial. Por lo tanto, se justifica la necesidad de utilizar métodos heurísticos y
+                metaheurísticos
+                como los algoritmos voraces y genéticos.</p>
+
+            <h3>Estrategia de Resolución con Algoritmos Voraces</h3>
+            <h4>Heurística del Primer Ajuste (First-Fit):</h4>
+            <ul>
+                <li><strong>Ordenación de pedidos:</strong> Comenzar por ordenar los pedidos de mayor a menor según su
+                    longitud.
+                    Esta estrategia ayuda a maximizar la ocupación de cada rollo desde el inicio, reduciendo las
+                    posibilidades
+                    de espacio no utilizado al final del rollo.</li>
+                <li><strong>Asignación de Pedidos:</strong> Asignar cada pedido al primer rollo que tenga espacio
+                    suficiente
+                    para acomodar la pieza de tela. Si no hay rollos disponibles, se inicia un nuevo rollo.</li>
+                <li><strong>Evaluación de Desperdicio:</strong> Calcular el desperdicio para cada rollo, que es el
+                    espacio
+                    no
+                    utilizado después de realizar todos los cortes posibles.</li>
+            </ul>
+
+            <h3>Estrategia de Resolución con Algoritmos Genéticos</h3>
+            <h4>Configuración Inicial:</h4>
+            <ul>
+                <li><strong>Codificación de Soluciones:</strong> Representar cada posible disposición de cortes en un
+                    rollo
+                    como
+                    un cromosoma, donde cada gen representa un corte específico.</li>
+                <li><strong>Población Inicial:</strong> Generar una población inicial de diversas disposiciones de
+                    cortes de
+                    manera aleatoria.</li>
+            </ul>
+            <h4>Operadores Genéticos:</h4>
+            <ul>
+                <li><strong>Selección:</strong> Elegir los mejores cromosomas basados en una función de aptitud que mide
+                    la
+                    cantidad de tela utilizada y el desperdicio minimizado.</li>
+                <li><strong>Cruzamiento:</strong> Combinar cromosomas seleccionados para crear nuevos descendientes,
+                    esperando
+                    que hereden las características deseables de ambos padres.</li>
+                <li><strong>Mutación:</strong> Introducir variaciones aleatorias en los cromosomas para explorar nuevas
+                    soluciones y evitar la convergencia prematura a óptimos locales.</li>
+            </ul>
+            <h4>Iteración y Convergencia:</h4>
+            <p>Repetir el proceso de selección, cruzamiento y mutación durante varias generaciones hasta que se observe
+                una
+                mejora insignificante entre las generaciones, indicando que la solución puede ser suficientemente buena
+                para
+                el
+                propósito práctico.</p>
+
+        </div>
+
+    </div>
+    <object  data="diagrama_flujo_genetico.pdf"></object>
+
+<iframe  src="diagrama_flujo_genetico.pdf"></iframe>
+
+
+</body>
+
+</html>
